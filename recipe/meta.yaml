@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev7" %}
+{% set version = "0.0.0.dev8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a1f9df62cdab43486bcabe958bf6eab25c5107eaa5762e637f8b476073e56d73
+  sha256: f47e92afad388da91223d94d7b5c07cc1da305c9ac20c51dd31b6ea17f729104
 
 build:
   number: 0
@@ -45,7 +45,6 @@ requirements:
     - plotly ==5.4.0
     - pymatgen ==2022.0.17
     - pymatgen-analysis-diffusion ==2021.4.29
-    - matminer >=0.7.4
 
 test:
   imports:
