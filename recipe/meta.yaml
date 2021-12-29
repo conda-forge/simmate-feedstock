@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev6" %}
+{% set version = "0.0.0.dev7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 55eefb35d0390d207f59b533bf727da71465c1642fd591b7e5a899a14b32089a
+  sha256: a1f9df62cdab43486bcabe958bf6eab25c5107eaa5762e637f8b476073e56d73
 
 build:
   number: 0
@@ -46,7 +46,6 @@ requirements:
     - pymatgen ==2022.0.17
     - pymatgen-analysis-diffusion ==2021.4.29
     - matminer >=0.7.4
-    - jsonschema >=4.2.1
 
 test:
   imports:
