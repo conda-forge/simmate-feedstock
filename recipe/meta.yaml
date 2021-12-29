@@ -32,7 +32,7 @@ requirements:
     - click >=8.0.3
     - numba >=0.53.0
     - django-crispy-forms >=1.13.0
-    - django-pandas >=0.6.6
+    - django-pandas >=0.6.1
     - dask-jobqueue >=0.7.3
     - scikit-learn >=1.0.1
     - dj-database-url >=0.5.0
