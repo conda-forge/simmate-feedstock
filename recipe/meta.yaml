@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev8" %}
+{% set version = "0.0.0.dev9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f47e92afad388da91223d94d7b5c07cc1da305c9ac20c51dd31b6ea17f729104
+  sha256: 7966b3dd90d3ae652694876ea6939239c268e00f4c697b8c1b98795500c886de
 
 build:
   number: 0
@@ -23,28 +23,29 @@ requirements:
     - python >=3.7
     - pip
   run:
-    - python >=3.7
+    - black >=21.12b0
+    - click >=8.0.3
+    - dask-core >=2021.12.0
+    - dask-jobqueue >=0.7.3
+    - dj-database-url >=0.5.0
+    - django >=3.2.10
+    - django-crispy-forms >=1.13.0
+    - django-extensions >=3.1.5
+    - django-filter >=21.1
+    - django-pandas >=0.6.1
+    - djangorestframework >=3.13.1
+    - matminer >=0.7.4
+    - numba >=0.53.0
     - numpy >=1.21.4
     - pandas >=1.3.5
-    - django ==3.2.10
-    - prefect ==0.15.11
-    - dask >=2021.12.0
-    - click >=8.0.3
-    - numba >=0.53.0
-    - django-crispy-forms >=1.13.0
-    - django-pandas >=0.6.1
-    - dask-jobqueue >=0.7.3
-    - scikit-learn >=1.0.1
-    - dj-database-url >=0.5.0
-    - djangorestframework ==3.13.1
-    - django-filter >=21.1
-    - django-extensions >=3.1.5
-    - pyyaml >=6.0
+    - plotly >=5.4.0
+    - prefect >=0.15.11
+    - pymatgen >=2022.0.16
+    - pymatgen-analysis-diffusion >=2021.4.29
     - pytest >=6.2.5
-    - black >=21.12b0
-    - plotly ==5.4.0
-    - pymatgen ==2022.0.17
-    - pymatgen-analysis-diffusion ==2021.4.29
+    - python >=3.7
+    - pyyaml >=6.0
+    - tqdm >=4.62.3
 
 test:
   imports:
