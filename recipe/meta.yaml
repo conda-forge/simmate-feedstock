@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev9" %}
+{% set version = "0.0.0.dev10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7966b3dd90d3ae652694876ea6939239c268e00f4c697b8c1b98795500c886de
+  sha256: c3dd86ee8f2497873d2dba90be28b9d5e011628e722dcf3f216b1eaf22d3843b
 
 build:
   number: 0
@@ -34,6 +34,7 @@ requirements:
     - django-filter >=21.1
     - django-pandas >=0.6.1
     - djangorestframework >=3.13.1
+    - jsonschema >=4.2.1
     - matminer >=0.7.4
     - numba >=0.53.0
     - numpy >=1.21.4
