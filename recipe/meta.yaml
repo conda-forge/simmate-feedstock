@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev10" %}
+{% set version = "0.0.0.dev11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c3dd86ee8f2497873d2dba90be28b9d5e011628e722dcf3f216b1eaf22d3843b
+  sha256: 961d2511f0365b03ee7d9432dc7e32b7e43e5738bd6d834c12f95185b56b6abc
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - dask-core >=2021.12.0
     - dask-jobqueue >=0.7.3
     - dj-database-url >=0.5.0
-    - django >=3.2.10
+    - django ==3.2.10
     - django-crispy-forms >=1.13.0
     - django-extensions >=3.1.5
     - django-filter >=21.1
