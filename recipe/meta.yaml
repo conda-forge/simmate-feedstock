@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev12" %}
+{% set version = "0.0.0.dev13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ca6457c70d3730499a0cf77deb8c984fd5b84f046ac891e6010c7a548da29fe
+  sha256: bd530d29edff9aac15071dae7ee41fc2c01d8dbf994c4e05540be030be83820a
 
 build:
   number: 0
@@ -58,6 +58,7 @@ test:
   commands:
     - pip check
     - simmate --help
+    - pytest
 
 about:
   home: https://github.com/jacksund/simmate
