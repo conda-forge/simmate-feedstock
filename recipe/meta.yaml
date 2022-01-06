@@ -58,7 +58,6 @@ test:
   commands:
     - pip check
     - simmate --help
-    - pytest
 
 about:
   home: https://github.com/jacksund/simmate
