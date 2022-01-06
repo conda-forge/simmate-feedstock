@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev11" %}
+{% set version = "0.0.0.dev12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 961d2511f0365b03ee7d9432dc7e32b7e43e5738bd6d834c12f95185b56b6abc
+  sha256: 2ca6457c70d3730499a0cf77deb8c984fd5b84f046ac891e6010c7a548da29fe
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
   run:
     - black >=21.12b0
     - click >=8.0.3
+    - coverage >=6.2
     - dask-core >=2021.12.0
     - dask-jobqueue >=0.7.3
     - dj-database-url >=0.5.0
@@ -34,7 +35,6 @@ requirements:
     - django-filter >=21.1
     - django-pandas >=0.6.1
     - djangorestframework >=3.13.1
-    - jsonschema >=4.2.1
     - matminer >=0.7.4
     - numba >=0.53.0
     - numpy >=1.21.4
@@ -44,6 +44,7 @@ requirements:
     - pymatgen >=2022.0.16
     - pymatgen-analysis-diffusion >=2021.4.29
     - pytest >=6.2.5
+    - pytest-django >=4.5.2
     - python >=3.7
     - pyyaml >=6.0
     - tqdm >=4.62.3
