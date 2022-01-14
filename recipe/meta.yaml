@@ -47,7 +47,7 @@ requirements:
     - pytest-django >=4.5.2
     - python >=3.9
     - pyyaml >=6.0
-    - tqdm >=4.62.3 
+    - tqdm >=4.62.3
 
 test:
   imports:
@@ -65,13 +65,13 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'Simmate is a toolbox for computational materials research.'
-   description: |
-     The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
-     materials research. It lets you explore various crystal databases, predict
-     new materials, and quickly calculate properties (electronic, elastic, 
-     thermodynamic, and more).
-   doc_url: https://jacksund.github.io/simmate/simmate.html
-   dev_url: https://github.com/jacksund/simmate
+  description: |
+    The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
+    materials research. It lets you explore various crystal databases, predict
+    new materials, and quickly calculate properties (electronic, elastic,
+    thermodynamic, and more).
+  doc_url: https://jacksund.github.io/simmate/simmate.html
+  dev_url: https://github.com/jacksund/simmate
 
 extra:
   recipe-maintainers:
