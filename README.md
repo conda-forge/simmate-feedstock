@@ -9,6 +9,16 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simmate-feedsto
 
 Summary: Simmate is a toolbox for computational materials research.
 
+Development: https://github.com/jacksund/simmate
+
+Documentation: https://jacksund.github.io/simmate/simmate.html
+
+The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
+materials research. It lets you explore various crystal databases, predict
+new materials, and quickly calculate properties (electronic, elastic,
+thermodynamic, and more).
+
+
 Current build status
 ====================
 
