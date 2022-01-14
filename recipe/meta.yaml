@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev13" %}
+{% set version = "0.0.0.dev14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd530d29edff9aac15071dae7ee41fc2c01d8dbf994c4e05540be030be83820a
+  sha256: 423de9d68fa34e3629d9b2571707e028691123af5982512a5c80d645be09e713
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
   run:
     - black >=21.12b0
@@ -29,11 +29,11 @@ requirements:
     - dask-core >=2021.12.0
     - dask-jobqueue >=0.7.3
     - dj-database-url >=0.5.0
-    - django ==3.2.10
+    - django >=4.0.0
     - django-crispy-forms >=1.13.0
     - django-extensions >=3.1.5
     - django-filter >=21.1
-    - django-pandas >=0.6.1
+    - django-pandas >=0.6.6
     - djangorestframework >=3.13.1
     - matminer >=0.7.4
     - numba >=0.53.0
@@ -45,7 +45,7 @@ requirements:
     - pymatgen-analysis-diffusion >=2021.4.29
     - pytest >=6.2.5
     - pytest-django >=4.5.2
-    - python >=3.7
+    - python >=3.9
     - pyyaml >=6.0
     - tqdm >=4.62.3
 
@@ -65,14 +65,13 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'Simmate is a toolbox for computational materials research.'
-  # Still setting things up, so these will be added later.
-  # description: |
-  #   The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
-  #   materials research. It lets you explore various crystal databases, predict
-  #   new materials, and quickly calculate properties (electronic, elastic, 
-  #   thermodynamic, and more).
-  # doc_url: https://simplejson.readthedocs.io/
-  # dev_url: https://github.com/jacksund/simmate
+  description: |
+    The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
+    materials research. It lets you explore various crystal databases, predict
+    new materials, and quickly calculate properties (electronic, elastic,
+    thermodynamic, and more).
+  doc_url: https://jacksund.github.io/simmate/simmate.html
+  dev_url: https://github.com/jacksund/simmate
 
 extra:
   recipe-maintainers:
