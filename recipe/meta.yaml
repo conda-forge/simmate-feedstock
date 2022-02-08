@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev14" %}
+{% set version = "0.0.0.dev15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 423de9d68fa34e3629d9b2571707e028691123af5982512a5c80d645be09e713
+  sha256: 38a2a824f1c3442c3a0c96c4f02cf0bbc9d171fb98685be3702fa3f0a9444408
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.9
     - pip
   run:
-    - black >=21.12b0
+    - black >=22.1.0
     - click >=8.0.3
     - coverage >=6.2
     - dask-core >=2021.12.0
@@ -32,7 +32,6 @@ requirements:
     - django >=4.0.0
     - django-crispy-forms >=1.13.0
     - django-extensions >=3.1.5
-    - django-filter >=21.1
     - django-pandas >=0.6.6
     - djangorestframework >=3.13.1
     - matminer >=0.7.4
