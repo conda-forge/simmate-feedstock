@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev15" %}
+{% set version = "0.0.0.dev16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 38a2a824f1c3442c3a0c96c4f02cf0bbc9d171fb98685be3702fa3f0a9444408
+  sha256: 1c67ced9b5f795ce0ee477ad490d896628ff96e6e1de95318cd93c61ff1dbc41
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
   run:
     - black >=22.1.0
@@ -35,7 +35,6 @@ requirements:
     - django-pandas >=0.6.6
     - djangorestframework >=3.13.1
     - matminer >=0.7.6
-    - numba >=0.53.0
     - numpy >=1.22.0
     - pandas >=1.3.5
     - plotly >=5.4.0
@@ -44,7 +43,9 @@ requirements:
     - pymatgen-analysis-diffusion >=2021.4.29
     - pytest >=6.2.5
     - pytest-django >=4.5.2
-    - python >=3.9
+    - pytest-mock >=3.7.0
+    - pytest-xdist >=2.5.0
+    - python >=3.10
     - pyyaml >=6.0
     - tqdm >=4.62.3
 
@@ -63,7 +64,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Simmate is a toolbox for computational materials research.'
+  summary: 'Simmate is a toolbox and framework for computational materials research.'
   description: |
     The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
     materials research. It lets you explore various crystal databases, predict

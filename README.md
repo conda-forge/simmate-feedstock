@@ -7,7 +7,7 @@ Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simmate-feedstock/blob/master/LICENSE.txt)
 
-Summary: Simmate is a toolbox for computational materials research.
+Summary: Simmate is a toolbox and framework for computational materials research.
 
 Development: https://github.com/jacksund/simmate
 
