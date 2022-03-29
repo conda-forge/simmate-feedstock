@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.0.0.dev17" %}
+{% set version = "0.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4ba2056d14ed9150461513b2ab3adbb5c33650879ec7fdc91b9e584177362031
+  sha256: 4ae49306b7256bc233f58443035ce2b4e8dc087f7de623b821cc1352ec2f5894
 
 build:
   number: 0
@@ -31,7 +31,6 @@ requirements:
     - dj-database-url >=0.5.0
     - django >=4.0.0
     - django-crispy-forms >=1.13.0
-    - django-extensions >=3.1.5
     - django-filter >=21.1
     - django-pandas >=0.6.6
     - djangorestframework >=3.13.1
@@ -67,10 +66,10 @@ about:
   license_file: LICENSE
   summary: 'Simmate is a toolbox and framework for computational materials research.'
   description: |
-    The Simulated Materials Ecosystem (Simmate) is a toolbox for computational
-    materials research. It lets you explore various crystal databases, predict
-    new materials, and quickly calculate properties (electronic, elastic,
-    thermodynamic, and more).
+    The Simulated Materials Ecosystem (Simmate) is a toolbox and framework for 
+    computational materials research. It lets you explore various crystal 
+    databases, predict new materials, and quickly calculate properties 
+    (electronic, elastic, thermodynamic, and more).
   doc_url: https://jacksund.github.io/simmate/simmate.html
   dev_url: https://github.com/jacksund/simmate
 
