@@ -12,9 +12,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-      - simmate = simmate.command_line.base_command:simmate
+    - simmate = simmate.command_line.base_command:simmate
 
 requirements:
   build:
@@ -64,7 +64,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Simmate is a toolbox and framework for computational materials research.'
+  summary: Simmate is a toolbox and framework for computational materials research.
   description: |
     The Simulated Materials Ecosystem (Simmate) is a toolbox and framework for 
     computational materials research. It lets you explore various crystal 
