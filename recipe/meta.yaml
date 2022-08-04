@@ -63,7 +63,7 @@ test:
     # allow us to enable this check again while excluding readchar
     # This error is also present in the Prefect feedstock
     #   https://github.com/conda-forge/prefect-feedstock/blob/f4b43b02aceb2bb213bdea491ed7002d7004819b/recipe/meta.yaml#L68-L71
-    - pip check
+    # - pip check
     - simmate --help
 
 about:
