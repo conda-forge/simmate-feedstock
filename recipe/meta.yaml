@@ -50,16 +50,31 @@ requirements:
 
 test:
   imports:
-    # only test a base import for now
     - simmate
+    - simmate.calculators
+    - simmate.command_line
+    - simmate.configuration
+    - simmate.database
+    - simmate.file_converters
+    - simmate.toolkit
+    - simmate.utilities
+    - simmate.visualization
+    - simmate.website
+    - simmate.workflow_engine
+    - simmate.workflows
   requires:
     - pip
+    - pytest >=6.2.5, <=7.1.2
+    - pytest-django >=4.5.2, <=4.5.2
+    - pytest-mock >=3.7.0, <=3.8.2
+    - pytest-xdist >=2.5.0, <=2.5.0
   commands:
     - pip check
     - simmate --help
+    - pytest
 
 about:
-  home: https://github.com/jacksund/simmate
+  home: https://simmate.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -69,7 +84,7 @@ about:
     computational materials research. It lets you explore various crystal 
     databases, predict new materials, and quickly calculate properties 
     (electronic, elastic, thermodynamic, and more).
-  doc_url: https://jacksund.github.io/simmate/simmate.html
+  doc_url: https://jacksund.github.io/simmate/home/
   dev_url: https://github.com/jacksund/simmate
 
 extra:
