@@ -62,18 +62,18 @@ test:
     - simmate.website
     - simmate.workflow_engine
     - simmate.workflows
-  requires:
-    - pip
-    - pytest >=6.2.5, <=7.1.2
-    - pytest-django >=4.5.2, <=4.5.2
-    - pytest-mock >=3.7.0, <=3.8.2
-    - pytest-xdist >=2.5.0, <=2.5.0
-  source_files:
-    - test
+  # requires:
+  #   - pip
+  #   - pytest >=6.2.5, <=7.1.2
+  #   - pytest-django >=4.5.2, <=4.5.2
+  #   - pytest-mock >=3.7.0, <=3.8.2
+  #   - pytest-xdist >=2.5.0, <=2.5.0
+  # source_files:
+  #   - test
   commands:
     - pip check
     - simmate --help
-    - pytest --no-migrations --durations=15 -m 'not blender and not vasp'
+    # - pytest --no-migrations --durations=15 -m 'not blender and not vasp'
 
 about:
   home: https://simmate.org/
