@@ -62,8 +62,8 @@ test:
     - simmate.website
     - simmate.workflow_engine
     - simmate.workflows
-  # requires:
-  #   - pip
+  requires:
+    - pip
   #   - pytest >=6.2.5, <=7.1.2
   #   - pytest-django >=4.5.2, <=4.5.2
   #   - pytest-mock >=3.7.0, <=3.8.2
