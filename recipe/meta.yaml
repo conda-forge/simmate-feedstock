@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8b7cbba704ad4ee4484ee10ff328b2b15880962b1813ea37665eda84e71da435
+  sha256: b435499defa8a37c965f4add53f78ad3def0cf7403328ef9580d441326eeda5a
 
 build:
   number: 0
@@ -23,11 +23,10 @@ requirements:
     - python >=3.10
     - pip
   run:
-    - black >=22.1.0, <=22.6.0
-    - click >=8.0.3, <=8.1.3
-    - coverage >=6.2, <=6.4.3
+    - ase >=3.22.1, <=3.22.1
+    - cloudpickle >=2.1.0, <=2.1.0
     - dask-core >=2021.12.0, <=2022.8.0
-    - dask-jobqueue >=0.7.3, <=0.7.4
+    - distributed >=2022.7.1, <=2022.8.0
     - dj-database-url >=0.5.0, <=0.5.0
     - django >=4.0.0, <=4.1.0
     - django-allauth >=0.50.0, <=0.51.0
@@ -35,23 +34,19 @@ requirements:
     - django-pandas >=0.6.6, <=0.6.6
     - django-filter >=21.1, <=22.1
     - djangorestframework >=3.13.1, <=3.13.1
-    - isort >=5.10.1, <=5.10.1
     - matminer >=0.7.6, <=0.7.8
-    - nest-asyncio >=1.5.5, <=1.5.5
+    - markdown >=3.4.1, <=3.4.1
     - numpy >=1.22.0, <=1.23.1
     - pandas >=1.3.5, <=1.4.3
-    - pdoc >=11.0.0, <=12.0.2
     - plotly >=5.4.0, <=5.9.0
-    - prefect >=2.0.0, <=2.0.4
     - pymatgen >=2022.1.9, <=2022.7.25
     - pymatgen-analysis-diffusion >=2021.4.29, <=2022.7.21
-    - pytest >=6.2.5, <7.1
-    - pytest-django >=4.5.2, <=4.5.2
     - python >=3.10
-    - pytest-mock >=3.7.0, <=3.8.2
-    - pytest-xdist >=2.5.0, <=2.5.0
     - pyyaml >=6.0, <=6.0
-    - tqdm >=4.62.3, <=4.64.0
+    - requests >=2.28.1, <=2.28.1
+    - rich >=11.0, <=12.5.1
+    - scikit-learn >=1.1.1, <=1.1.1
+    - typer >=0.4.1, <=0.6.1
 
 test:
   imports:
@@ -60,12 +55,7 @@ test:
   requires:
     - pip
   commands:
-    # `pip check` fails on `readchar` which has a different identifier when provided by conda
-    # A `--ignore` flag is in progress at https://github.com/pypa/pip/pull/11159 which will
-    # allow us to enable this check again while excluding readchar
-    # This error is also present in the Prefect feedstock
-    #   https://github.com/conda-forge/prefect-feedstock/blob/f4b43b02aceb2bb213bdea491ed7002d7004819b/recipe/meta.yaml#L68-L71
-    # - pip check
+    - pip check
     - simmate --help
 
 about:
