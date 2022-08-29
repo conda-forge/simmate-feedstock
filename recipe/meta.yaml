@@ -69,7 +69,7 @@ test:
     - pytest-mock >=3.7.0, <=3.8.2
     - pytest-xdist >=2.5.0, <=2.5.0
   source_files:
-    - tests
+    - test
   commands:
     - pip check
     - simmate --help
