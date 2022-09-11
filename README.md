@@ -1,7 +1,7 @@
 About simmate
 =============
 
-Home: https://github.com/jacksund/simmate
+Home: https://simmate.org/
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: Simmate is a toolbox and framework for computational materials research
 
 Development: https://github.com/jacksund/simmate
 
-Documentation: https://jacksund.github.io/simmate/simmate.html
+Documentation: https://jacksund.github.io/simmate/home/
 
 The Simulated Materials Ecosystem (Simmate) is a toolbox and framework for
 computational materials research. It lets you explore various crystal
