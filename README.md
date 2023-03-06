@@ -1,11 +1,11 @@
-About simmate
-=============
+About simmate-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simmate-feedstock/blob/main/LICENSE.txt)
 
 Home: https://simmate.org/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simmate-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simmate is a toolbox and framework for computational materials research.
 
