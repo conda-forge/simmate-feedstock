@@ -61,7 +61,7 @@ test:
     - simmate.utilities
     - simmate.visualization
     - simmate.website
-    - simmate.workflow_engine
+    - simmate.engine
     - simmate.workflows
   requires:
     - pip
