@@ -72,7 +72,7 @@ test:
   # source_files:
   #   - test
   commands:
-    - pip check
+    # - pip check  # BUG: matminer isn't printing proper version
     - simmate --help
     # - pytest --no-migrations --durations=15 -m 'not blender and not vasp'
 
