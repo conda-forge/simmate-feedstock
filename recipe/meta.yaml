@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5928eaf983e4c962757802831179a4bb6105c21ff8e234b905424559d4b2edcc
+  sha256: 8ad61156f918091e23b752cb92601f4316b413387c584516df0599b8c97bdac5
 
 build:
   number: 0
