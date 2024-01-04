@@ -1,5 +1,5 @@
 {% set name = "simmate" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d8e4c9fcc01f97e55e959f9161f416d8c6192b6d2a001fe5aa48f8c45aeec748
+  sha256: c26127ac74581356b408eb882a4703e42e0777138ee6fbbeef584cdfec5442c9
 
 build:
   number: 0
@@ -24,31 +24,36 @@ requirements:
     - pip
   run:
     - ase >=3.22.1, <=3.22.1
-    - cloudpickle >=2.1.0, <=2.2.0
-    - dask-core >=2021.12.0, <2023.6.0
-    - distributed >=2022.7.1, <2023.2.0
+    - cloudpickle >=2.1.0, <=3.0.0
+    - dask-core >=2023.6.1, <2023.11.1
+    - distributed >=2023.6.1, <2023.11.1
     - dj-database-url >=0.5.0, <1.4.0
-    - django >=4.0.0, <4.1.6
-    - django-allauth >=0.50.0, <=0.54.0
+    - django >=4.0.0, <4.2.8
+    - django-allauth >=0.56.0, <=0.58.0
+    - django-contrib-comments >=2.2.0, <=2.2.0
     - django-crispy-forms >=1.13.0, <=1.14.0
     - django-pandas >=0.6.6, <=0.6.6
     - django-filter >=21.1, <=22.1
-    - django_unicorn >=0.50.0, <=0.50.0
+    - django_unicorn >=0.50.0, <=0.55.0
+    - django-simple-history >=3.3.0, <=3.3.0
     - djangorestframework >=3.13.1, <3.14.1
     - matminer >=0.7.6, <0.8.1
-    - markdown >=3.4.1, <=3.4.3
+    - markdown >=3.4.1, <=3.5.1
+    - mp-pyrho >=0.3.0, <=0.3.0
     - numpy >=1.22.0, <1.24.2
-    - pandas >=1.3.5, <1.5.4
-    - plotly >=5.4.0, <5.15.0
+    - pandas >=2.0.0, <2.1.4
+    - plotly >=5.4.0, <5.17.0
     - pymatgen >=2022.1.9, <2023.5.32
-    - pymatgen-analysis-diffusion >=2021.4.29, <=2022.7.21
+    - pymatgen-analysis-diffusion >=2021.4.29, <=2023.8.15
     - python >=3.10
-    - pyyaml >=6.0, <=6.0
+    - pyyaml >=6.0, <=6.0.1
     - requests >=2.28.1, <2.28.3
-    - rich >=11.0, <=13.3.4
+    - rich >=11.0, <=13.5.2
     - scikit-learn >=1.1.1, <1.2.2
+    - schedule >=1.2.0, <=1.2.0
     - toml >=0.10.2, <=0.10.2
     - typer >=0.6.0, <0.7.1
+    - xmltodict >=0.13.0, <=0.13.0
 
 test:
   imports:
