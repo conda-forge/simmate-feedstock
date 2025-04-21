@@ -27,23 +27,26 @@ requirements:
     - python {{ python_min }}
     - pip
   run:
-    - ase >=3.22.1, <=3.22.1
+    - ase >=3.22.1, <=3.23.0
     - cloudpickle >=2.1.0, <=3.0.0
+    - coverage >=6.2, <7.4.4
     - dask-core >=2023.6.1, <2024.4.3
     - distributed >=2023.6.1, <2024.4.3
     - dj-database-url >=0.5.0, <1.4.0
     - django >=4.0.0, <4.2.8
-    - django-allauth >=0.56.0, <=0.58.0
+    - django-allauth >=0.56.0, <=0.63.3
     - django-contrib-comments >=2.2.0, <=2.2.0
     - django-crispy-forms >=1.13.0, <=1.14.0
-    - django-pandas >=0.6.6, <=0.6.6
     - django-filter >=21.1, <=22.1
-    - django_unicorn >=0.59.0, <=0.59.0
+    - beautifulsoup4 >=4.8.0
+    - orjson >=3.6.0
+    - shortuuid >=1.0.1
+    - cachetools >=4.1.1
+    - decorator >=4.4.2
     - django-simple-history >=3.3.0, <=3.3.0
     - djangorestframework >=3.13.1, <3.15.2
-    - matminer >=0.7.6, <0.8.1
+    - matminer >=0.9.3, <=0.9.3
     - markdown >=3.4.1, <=3.5.1
-    - mp-pyrho >=0.3.0, <=0.3.0
     - numpy >=1.22.0, <1.24.2
     - pandas >=2.0.0, <2.1.4
     - plotly >=5.4.0, <5.19.0
@@ -51,9 +54,9 @@ requirements:
     - pymatgen-analysis-diffusion >=2021.4.29, <=2023.8.15
     - python >={{ python_min }}
     - pyyaml >=6.0, <=6.0.1
-    - requests >=2.28.1, <2.28.3
+    - rdkit >=2024.03.1, <=2024.03.1
+    - requests >=2.28.1, <=2.32.3
     - rich >=11.0, <=13.5.2
-    - scikit-learn >=1.1.1, <1.2.2
     - schedule >=1.2.0, <=1.2.0
     - toml >=0.10.2, <=0.10.2
     - typer >=0.6.0, <0.7.1
@@ -92,12 +95,12 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Simmate is a toolbox and framework for computational materials research.
+  summary: Simmate is a full-stack framework for chemistry research.
   description: |
-    The Simulated Materials Ecosystem (Simmate) is a toolbox and framework for 
-    computational materials research. It lets you explore various crystal 
-    databases, predict new materials, and quickly calculate properties 
-    (electronic, elastic, thermodynamic, and more).
+    Simmate is a full-stack framework for chemistry research. It helps you calculate
+    properties and explore third-party databases for both for molecular and 
+    crystalline systems. For experts, it also provides a toolbox to build out
+    your own chemistry applications.
   doc_url: https://jacksund.github.io/simmate/home/
   dev_url: https://github.com/jacksund/simmate
 
