@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "simmate" %}
 {% set version = "0.19.0" %}
 
@@ -26,66 +26,58 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - ase >=3.22.1, <=3.23.0
-    - cloudpickle >=2.1.0, <=3.0.0
-    - dask-core >=2023.6.1, <2024.4.3
-    - distributed >=2023.6.1, <2024.4.3
-    - dj-database-url >=0.5.0, <1.4.0
-    - django >=4.0.0, <4.2.8
-    - django-allauth >=0.56.0, <=0.63.3
-    - django-contrib-comments >=2.2.0, <=2.2.0
-    - django-crispy-forms >=1.13.0, <=1.14.0
-    - django-filter >=21.1, <=22.1
-    - beautifulsoup4 >=4.8.0
-    - orjson >=3.6.0
-    - shortuuid >=1.0.1
-    - cachetools >=4.1.1
-    - decorator >=4.4.2
-    - django-simple-history >=3.3.0, <=3.3.0
-    - djangorestframework >=3.13.1, <3.15.2
-    - ipython >=8.22.2, <=8.29.0
-    - matminer >=0.9.3, <=0.9.3
-    - markdown >=3.4.1, <=3.5.1
-    - numpy >=1.22.0, <1.24.2
-    - pandas >=2.0.0, <2.1.4
-    - plotly >=5.4.0, <5.19.0
-    - pymatgen >=2022.1.9, <2023.5.32
-    - pymatgen-analysis-diffusion >=2021.4.29, <=2023.8.15
-    - python >={{ python_min }}
-    - pyyaml >=6.0, <=6.0.1
-    - rdkit >=2024.03.1, <=2024.03.1
-    - requests >=2.28.1, <=2.32.3
-    - rich >=11.0, <=13.5.2
-    - scikit-learn >=1.1.1, <1.5.1
-    - schedule >=1.2.0, <=1.2.0
-    - toml >=0.10.2, <=0.10.2
-    - typer >=0.6.0, <0.7.1
-    - xmltodict >=0.13.0, <=0.13.0
+    - python >={{ python_min }},<3.12
+    - numpy >=2.0.0,<3.0.0
+    - pandas >=2.0.0,<3.0.0
+    - django >=5.2.11,<6.0.0
+    - typer >=0.24.1,<0.25.0
+    - psycopg2-binary >=2.9.11,<3.0.0
+    - pymatgen >=2025.10.7,<2025.10.8
+    - pymatgen-analysis-diffusion >=2025.11.15,<2025.11.16
+    - matminer >=0.10.0,<0.11.0
+    - ase >=3.22.1,<3.23.0
+    - rdkit >=2025.9.5,<2025.9.6
+    - ipython >=8.22.2,<10.0.0
+    - django-allauth >=0.63.3,<0.64.0
+    - django-simple-history >=3.11.0,<3.12.0
+    - pyyaml >=6.0.3,<7.0.0
+    - plotly >=6.5.0,<7.0.0
+    - markdown >=3.4.1,<4.0.0
+    - requests >=2.32.5,<3.0.0
+    - scikit-learn >=1.1.1,<2.0.0
+    - cloudpickle >=3.1.2,<=4.0.0
+    - rich >=14.3.3,<15.0.0
+    - toml >=0.10.2,<0.11.0
+    - schedule >=1.2.2,<2.0.0
+    - xmltodict >=1.0.4,<2.0.0
+    - dask-core >=2026.1.2,<2026.1.3
+    - distributed >=2026.1.2,<2026.1.3
+    - beautifulsoup4 >=4.0.0,<5.0.0
+    - cachetools >=7.0.1,<8.0.0
+    - umap-learn >=0.5.5,<0.6.0
 
 test:
   imports:
     - simmate
     - simmate.apps
     - simmate.command_line
-    - simmate.configuration
+    - simmate.config
     - simmate.database
-    - simmate.file_converters
     - simmate.toolkit
-    - simmate.utilities
-    - simmate.visualization
+    - simmate.utils
     - simmate.website
-    - simmate.engine
     - simmate.workflows
   requires:
     - pip
+    - python {{ python_min }}
   #   - pytest >=6.2.5, <=7.1.2
   #   - pytest-django >=4.5.2, <=4.5.2
   #   - pytest-mock >=3.7.0, <=3.8.2
   #   - pytest-xdist >=2.5.0, <=2.5.0
   # source_files:
   #   - test
-    - python {{ python_min }}
   commands:
     # - pip check  # BUG: matminer isn't printing proper version
     - simmate --help
